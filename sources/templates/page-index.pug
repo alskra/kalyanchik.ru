@@ -1,0 +1,18 @@
+include helpers/variables
+include helpers/mixins
+
+include ../blocks/root/root
+include ../blocks/header/header
+include ../blocks/footer/footer
+
+- $.title = `Главная - ${$.package.description}`;
+
++root
+  +e.__body-layout
+    +header.__header
+
+    +e.__main
+
+    +footer.__footer
+
+

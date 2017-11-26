@@ -1,0 +1,42 @@
+.svg-symbols {
+  border: 0 !important;
+  clip: rect(0, 0, 0, 0) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+}
+
+[class^='icon-svg-'], [class*=' icon-svg-'] {
+  * {
+    pointer-events: none;
+  }
+}
+
+.icon-svg-angle-right {
+  width: (0.688em/1.125em*1em);
+  height: 1em;
+}
+//
+.icon-svg-expand-more {
+  width: (0.75em/0.5em*1em);
+  height: 1em;
+}
+//
+.icon-svg-place {
+  width: (0.75em/1em*1em);
+  height: 1em;
+}
+//
+.icon-svg-search {
+  width: (1.063em/1.063em*1em);
+  height: 1em;
+}
+//
+.icon-svg-visibility {
+  width: (1.375em/0.938em*1em);
+  height: 1em;
+}
+//

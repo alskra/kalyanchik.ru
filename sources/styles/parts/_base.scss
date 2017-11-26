@@ -1,0 +1,9 @@
+:focus {
+  outline: 0;
+}
+
+.container-fluid {
+  max-width: map-get($grid-breakpoints, xl);
+  padding-left: 20px;
+  padding-right: 20px;
+}

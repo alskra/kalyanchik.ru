@@ -1,0 +1,33 @@
+.header {
+  color: #141414;
+  background-color: #efefef;
+  padding-top: rem(27);
+  padding-bottom: rem(40);
+
+  &__tel {
+    color: #404040;
+    font-size: rem(13);
+    font-weight: 400;
+    line-height: 1.2;
+
+    &-lnk {
+      display: inline-block;
+      vertical-align: top;
+      color: #141414;
+      text-decoration: none;
+      @include state-hover-focus {
+        color: #141414;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__col-2 {
+    text-align: center;
+  }
+
+  &__logo {
+    width: 221px;
+    vertical-align: top;
+  }
+}

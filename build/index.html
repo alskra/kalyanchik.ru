@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html class="root no-js" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+    <title>Список страниц — Кальянчик.ру</title>
+    <!-- Meta-->
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <!-- Favicons-->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <!-- CSS-->
+    <link rel="stylesheet" href="static/css/bootstrap.css" />
+    <link rel="stylesheet" href="static/css/main.css" />
+    <!-- JS Inline-->
+    <script>
+      var ajax = new XMLHttpRequest();
+      ajax.open("GET", "static/images/svg-symbols.svg", true);
+      ajax.send();
+      ajax.onload = function(e)
+      {
+        var div = document.createElement("div");
+        div.innerHTML = ajax.responseText;
+        document.body.insertBefore(div, document.body.childNodes[0]);
+      };
+    </script>
+    <script>
+      function fitImg(e)
+      {
+        var s = e.style;
+        document.documentElement.style.objectFit === undefined && (s.backgroundImage = 'url(' + e.src + ')', s.paddingLeft = '100%');
+        s.visibility = 'visible';
+      }
+    </script>
+  </head>
+  <body class="root__body">
+    <div class="root__body-layout">
+      <main class="py-5" role="main">
+        <div class="container-fluid">
+          <h1 class="mb-5">Кальянчик.ру</h1>
+          <ol>
+            <li>
+              <a href="page-index.html" target="_blank">Главная
+                <small>(page-index.html)</small>
+              </a>
+            </li>
+          </ol>
+        </div>
+      </main>
+    </div>
+    <!-- JS-->
+    <script src="static/js/main.js" async=""></script>
+  </body>
+</html>

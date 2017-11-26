@@ -1,0 +1,24 @@
+mixin root
+  +b.HTML.root(class='no-js' lang='ru')&attributes(attributes)
+    head
+      meta(charset='utf-8')
+      meta(name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no')
+      title= $.title
+      // Meta
+      meta(name='description' content='')
+      meta(name='keywords' content='')
+      meta(name='author' content='')
+      // Favicons
+      link(rel='icon' type='image/x-icon' href='/favicon.ico')
+      // CSS
+      link(rel='stylesheet' href=`static/css/bootstrap${$.isDevelopment ? '' : '.min'}.css`)
+      link(rel='stylesheet' href=`static/css/main${$.isDevelopment ? '' : '.min'}.css`)
+      // JS Inline
+      script
+        include ../../../app_components/svg-symbols/svg-symbols.js
+      script
+        include ../../../app_components/fit-img/fit-img.js
+    +e.BODY.__body
+      block
+      // JS
+      script(src=`static/js/main${$.isDevelopment ? '' : '.min'}.js` async='')

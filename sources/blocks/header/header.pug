@@ -1,0 +1,16 @@
+mixin header
+  +b.HEADER.header&attributes(attributes)
+    .container-fluid
+      .row
+        +e.__col-1.col-12.col-lg-4
+          +e.__tel
+            +e.__tel-icon
+            +e.A.__tel-lnk(href='tel:+79251000399') + 7 (925) 100-03-99
+            br
+            | Звонки принимаем круглосуточно!
+        +e.__col-2.col-12.col-lg-4
+          +b.A.logo.__logo(href=pageList.index.url title=$.package.description)
+            +e.IMG.__img(src='static/images/logo.png' alt=$.package.description)
+
+        +e.__col-3.col-12.col-lg-4
+    block

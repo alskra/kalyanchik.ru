@@ -1,0 +1,32 @@
+.root {
+  min-width: 320px;
+  ::selection {
+    color: white;
+    background: $blue;
+  }
+
+  &__body {
+    display: flex;
+    flex-flow: column;
+  }
+
+  &__body-layout {
+    display: flex;
+    flex-flow: column;
+    overflow: hidden;
+    min-height: 100vh;
+  }
+
+  &__header {
+    flex: none;
+  }
+
+  &__main {
+    flex: none;
+  }
+
+  &__footer {
+    flex: none;
+    margin-top: auto;
+  }
+}
