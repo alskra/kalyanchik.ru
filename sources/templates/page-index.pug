@@ -12,6 +12,179 @@ include ../blocks/footer/footer
     +header.__header
 
     +e.__main
+      +b.carousel.__carousel
+        +e.__inner(data-slick='{"autoplay": true, "autoplaySpeed": 5000}')
+          +e.__item
+            +e.IMG.__img(data-lazy='assets/carousel/slide1.jpg' alt='' data-fit-img='cover' onload='fitImg(this)')
+            +e.__content
+              +e.__title Кальян Ager
+              +e.__str-1 по цене
+              +e.__str-2 5 450 р. #[br.d-md-none]#[small 6500 р.]
+              +b.A.button-1.__btn-to-cart(href=js) Добавить в корзину
+          +e.__item
+            +e.IMG.__img(data-lazy='assets/carousel/slide1.jpg' alt='' data-fit-img='cover' onload='fitImg(this)')
+            +e.__content
+              +e.__title Длинный заголовок слайда 2
+              +e.__str-1 по цене
+              +e.__str-2 15 999 р. #[br.d-md-none]#[small 16500 р.]
+              +b.A.button-1.__btn-to-cart(href=js) Добавить в корзину
+      +b.SECTION.section
+        +e.HEADER.__header
+          .container-fluid
+            +e.H2.__title Популярные новинки месяца
+        .container-fluid
+          +b.carousel-1
+            +e.__inner(data-slick='{"autoplay": true, "autoplaySpeed": 7000}')
+              - var n = 0;
+              while n < 2
+                - n++;
+                +b.A.product.__item(href=js data-lbl='Hit')
+                  +e.DIV.__img-box
+                    +e.IMG.__img(data-lazy='assets/products/product-1.jpg' alt='' data-fit-img='contain' onload='fitImg(this)')
+                  +e.H3.__title Кальян Ager (Brown) современный
+                  +e.DIV.__price 6 789 р.
+                  +b.BUTTON.button-1--size-product.__btn-to-cart В корзину
+                +b.A.product.__item(href=js data-lbl='New')
+                  +e.DIV.__img-box
+                    +e.IMG.__img(data-lazy='assets/products/product-2.jpg' alt='' data-fit-img='contain' onload='fitImg(this)')
+                  +e.H3.__title Кальян Ager (Purple)
+                  +e.DIV.__price 3 627 р.
+                  +b.BUTTON.button-1--size-product.__btn-to-cart В корзину
+                +b.A.product.__item(href=js data-lbl='Sale')
+                  +e.DIV.__img-box
+                    +e.IMG.__img(data-lazy='assets/products/product-1.jpg' alt='' data-fit-img='contain' onload='fitImg(this)')
+                  +e.H3.__title Кальян Ager (Brown) современный
+                  +e.DIV.__price 6 789 р.
+                  +b.BUTTON.button-1--size-product.__btn-to-cart В корзину
+                +b.A.product.__item(href=js data-lbl='New')
+                  +e.DIV.__img-box
+                    +e.IMG.__img(data-lazy='assets/products/product-2.jpg' alt='' data-fit-img='contain' onload='fitImg(this)')
+                  +e.H3.__title Кальян Ager (Purple)
+                  +e.DIV.__price 3 627 р.
+                  +b.BUTTON.button-1--size-product.__btn-to-cart В корзину
+            .row.align-items-end
+              +e.__dots.col-12.col-md-6
+              .col-12.col-md-6.text-center.text-md-right
+                +b.A.button-1(href=js) Перейти в каталог
+
+      +b.SECTION.section-about
+        .container-fluid
+          .row
+            +e.__col.col-12.col-lg-4
+              +e.ARTICLE.__item
+                +e.__item-col-1
+                  +e.IMG.__item-img(src='static/images/delivery.png' width='72' alt='Быстрая доставка')
+                +e.__item-col-2
+                  +e.H2.__item-title Быстрая доставка
+                  +e.P.__item-desc Мы гарантируем всем нашим  покупателям быструю
+            +e.__col.col-12.col-lg-4
+              +e.ARTICLE.__item
+                +e.__item-col-1
+                  +e.IMG.__item-img(src='static/images/quality.png' width='69' alt='Качество товара')
+                +e.__item-col-2
+                  +e.H2.__item-title Качество товара
+                  +e.P.__item-desc У нас всегда свежий и только качественный товар
+            +e.__col.col-12.col-lg-4
+              +e.ARTICLE.__item
+                +e.__item-col-1
+                  +e.IMG.__item-img(src='static/images/best-price.png' width='69' alt='Лучшие цены')
+                +e.__item-col-2
+                  +e.H2.__item-title Лучшие цены
+                  +e.P.__item-desc У нас Вы найдете нужные Вам товары по хорошим ценам
+
+      +b.SECTION.section
+        +e.HEADER.__header
+          .container-fluid
+            +e.H2.__title Хиты продаж
+        .container-fluid
+          +b.carousel-1
+            +e.__inner(data-slick='{"autoplay": true, "autoplaySpeed": 7000}')
+              - n = 0;
+              while n < 2
+                - n++;
+                +b.A.product.__item(href=js data-lbl='Hit')
+                  +e.DIV.__img-box
+                    +e.IMG.__img(data-lazy='assets/products/product-3.jpg' alt='' data-fit-img='contain' onload='fitImg(this)')
+                  +e.H3.__title Табак для кальяна Al Fakher современный
+                  +e.DIV.__price 49 р.
+                  +b.BUTTON.button-1--size-product.__btn-to-cart В корзину
+                +b.A.product.__item(href=js data-lbl='Hit')
+                  +e.DIV.__img-box
+                    +e.IMG.__img(data-lazy='assets/products/product-4.jpg' alt='' data-fit-img='contain' onload='fitImg(this)')
+                  +e.H3.__title Табак для кальяна Al Fakher(Chocolate)
+                  +e.DIV.__price 97 р.
+                  +b.BUTTON.button-1--size-product.__btn-to-cart В корзину
+                +b.A.product.__item(href=js data-lbl='Hit')
+                  +e.DIV.__img-box
+                    +e.IMG.__img(data-lazy='assets/products/product-5.jpg' alt='' data-fit-img='contain' onload='fitImg(this)')
+                  +e.H3.__title Табак для кальяна Al Fakher (Mini)
+                  +e.DIV.__price 59 р.
+                  +b.BUTTON.button-1--size-product.__btn-to-cart В корзину
+                +b.A.product.__item(href=js data-lbl='Hit')
+                  +e.DIV.__img-box
+                    +e.IMG.__img(data-lazy='assets/products/product-6.jpg' alt='' data-fit-img='contain' onload='fitImg(this)')
+                  +e.H3.__title Табак для кальяна Al Fakher (Orange)
+                  +e.DIV.__price 87 р.
+                  +b.BUTTON.button-1--size-product.__btn-to-cart В корзину
+            .row.align-items-end
+              +e.__dots.col-12.col-md-6
+              .col-12.col-md-6.text-center.text-md-right
+                +b.A.button-1(href=js) Перейти в каталог
+
+      +b.SECTION.section--style-dark
+        +e.HEADER.__header
+          .container-fluid
+            +e.H2.__title Акционные товары
+        .container-fluid
+          +b.carousel-1
+            +e.__inner(data-slick='{"autoplay": true, "autoplaySpeed": 7000, "responsive": [{"breakpoint":575,"settings":{"slidesToShow":2}},{"breakpoint":767,"settings":{"slidesToShow":2}},{"breakpoint":1023,"settings":{"slidesToShow":3}}]}')
+              - n = 0;
+              while n < 2
+                - n++;
+                +b.A.product--style-big.__item(href=js data-lbl='Sale')
+                  +e.DIV.__img-box
+                    +e.IMG.__img(data-lazy='assets/products/product-7.jpg' alt='' data-fit-img='contain' onload='fitImg(this)')
+                  +e.H3.__title Табак для кальяна Al Fakher
+                  +e.DIV.__price 149 р.
+                    +e.SPAN.__price-old 256 р.
+                  +b.BUTTON.button-1--size-product.__btn-to-cart Добавить в корзину
+                +b.A.product--style-big.__item(href=js data-lbl='Sale')
+                  +e.DIV.__img-box
+                    +e.IMG.__img(data-lazy='assets/products/product-7.jpg' alt='' data-fit-img='contain' onload='fitImg(this)')
+                  +e.H3.__title Табак для кальяна Al Fakher
+                  +e.DIV.__price 149 р.
+                    +e.SPAN.__price-old 256 р.
+                  +b.BUTTON.button-1--size-product.__btn-to-cart Добавить в корзину
+                +b.A.product--style-big.__item(href=js data-lbl='Sale')
+                  +e.DIV.__img-box
+                    +e.IMG.__img(data-lazy='assets/products/product-8.jpg' alt='' data-fit-img='contain' onload='fitImg(this)')
+                  +e.H3.__title Кальян Mya Mozza 456
+                  +e.DIV.__price 4 649 р.
+                    +e.SPAN.__price-old 5 256 р.
+                  +b.BUTTON.button-1--size-product.__btn-to-cart Добавить в корзину
+            .row.align-items-end
+              +e.__dots.col-12.col-md-6
+              .col-12.col-md-6.text-center.text-md-right
+                +b.A.button-1(href=js) Перейти в каталог
+
+      +b.SECTION.section
+        +e.HEADER.__header
+          .container-fluid
+            +e.H2.__title Немного о компании
+        .container-fluid.text-center
+          .row
+            .col-12.col-xl-8.offset-xl-2
+              .content
+                p: strong.
+                  Вы уже давно не представляете своей жизни без кальяна, или только решили внести в свой
+                  дом восточную изысканность и шарм, а может, хотите купить кальян для подарка, тогда вы обратились точно по адресу.
+                p.
+                  В специализированном Интернет-магазине www.kaljanchik.ru , Вы найдете кальян, который будет
+                  удовлетворять все Ваши пожелания! В разделе «Кальяны» представлен огромный выбор приборов для
+                  курения из разных уголков мира (Сирия, Египет, Китай, Ливан), от самых маленьких и дешевых, до дорогих
+                  и изысканных. В нашем ассортименте есть всемирно известные бренды.
+                div &nbsp;
+              +b.A.button-1(href=js) Подробнее о нашей компании
 
     +footer.__footer
 

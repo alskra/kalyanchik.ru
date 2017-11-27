@@ -1,10 +1,10 @@
 mixin root
   +b.HTML.root(class='no-js' lang='ru')&attributes(attributes)
     head
-      meta(charset='utf-8')
-      meta(name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no')
       title= $.title
       // Meta
+      meta(charset='utf-8')
+      meta(name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no')
       meta(name='description' content='')
       meta(name='keywords' content='')
       meta(name='author' content='')
@@ -14,11 +14,16 @@ mixin root
       link(rel='stylesheet' href=`static/css/bootstrap${$.isDevelopment ? '' : '.min'}.css`)
       link(rel='stylesheet' href=`static/css/main${$.isDevelopment ? '' : '.min'}.css`)
       // JS Inline
+      // Insert svg-symbols
       script
         include ../../../app_components/svg-symbols/svg-symbols.js
+      // Fix object-fit <img>
       script
         include ../../../app_components/fit-img/fit-img.js
     +e.BODY.__body
       block
       // JS
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
       script(src=`static/js/main${$.isDevelopment ? '' : '.min'}.js` async='')

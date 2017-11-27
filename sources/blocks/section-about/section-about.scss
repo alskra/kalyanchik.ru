@@ -1,0 +1,70 @@
+.section-about {
+  $r: &;
+  background-color: $color-black;
+  padding: rem(30) 0;
+
+  &__col {
+    padding-top: rem(10);
+    padding-bottom: rem(10);
+  }
+
+  &__item {
+    $p: &;
+    display: flex;
+    align-items: flex-start;
+    color: #acacac;
+    font-size: rem(16);
+    line-height: 1.2;
+    &:hover {
+      #{$p}-col-1 {
+        background-color: white;
+      }
+    }
+
+    &-col-1 {
+      flex: none;
+      width: rem(138);
+      height: rem(138);
+      background-color: #292929;
+      margin-right: rem(22);
+      border-radius: 50%;
+      transition: $transition-base;
+      border: rem(15) solid transparent;
+      position: relative;
+
+      @include media-breakpoint-down(xs) {
+        width: rem(69);
+        height: rem(69);
+      }
+    }
+
+    &-col-2 {
+      flex: 1 1 auto;
+      overflow: hidden;
+      align-self: center;
+    }
+
+    &-img {
+      max-width: 100%;
+      max-height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+
+    &-title {
+      color: inherit;
+      font-size: rem(24);
+      font-weight: 500;
+      line-height: (28/24);
+      margin: 0 0 rem(10);
+    }
+
+    &-desc {
+      margin: 0;
+    }
+  }
+}

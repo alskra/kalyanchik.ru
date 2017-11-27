@@ -1,0 +1,143 @@
+.product {
+  $r: &;
+  display: block;
+  color: black;
+  text-decoration: none;
+  font-size: rem(16);
+  line-height: 1.2;
+  text-align: center;
+  background-color: white;
+  padding: rem(40) rem(20) rem(35);
+  box-shadow: inset 0 0 0 rem(1) $color-gray, 0 0 transparent;
+  transition: $transition-base;
+  position: relative;
+  @include state-hover-focus {
+    color: black;
+    text-decoration: none;
+    box-shadow: inset 0 0 transparent, 0 0 rem(40) rgba(100, 100, 100, 0.27);
+    #{$r}__title, #{$r}__price {
+      opacity: 0;
+    }
+    #{$r}__btn-to-cart {
+      opacity: 1;
+    }
+  }
+
+  &__img-box {
+    position: relative;
+    max-width: 245px;
+    margin: 0 auto rem(35);
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__title {
+    font-size: rem(16);
+    font-weight: 400;
+    line-height: 1.2em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 1.2em*2;
+    margin: 0 0 rem(15);
+    transition: $transition-base;
+  }
+
+  &__price {
+    font-size: rem(24);
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: $transition-base;
+
+    &-old {
+      color: #909090;
+      font-size: rem(16);
+      font-weight: 400;
+      text-decoration: line-through;
+      vertical-align: middle;
+      margin-left: rem(10);
+    }
+  }
+
+  &__btn-to-cart {
+    position: absolute;
+    bottom: rem(52);
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    transition: $transition-base;
+    opacity: 0;
+  }
+
+  &[data-lbl] {
+    &::before {
+      content: attr(data-lbl);
+      position: absolute;
+      top: rem(13);
+      right: 0;
+      z-index: 2;
+      color: white;
+      font-size: rem(14);
+      font-weight: 500;
+      line-height: 1;
+      padding: rem(7) rem(14) rem(6);
+      background: $color-text;
+    }
+  }
+
+  &[data-lbl='Hit'] {
+    &::before {
+      background: $color-hit;
+    }
+  }
+
+  &[data-lbl='New'] {
+    &::before {
+      background: $color-new;
+    }
+  }
+
+  &[data-lbl='Sale'] {
+    &::before {
+      background: $color-sale;
+    }
+  }
+
+  &--style-big {
+    padding-top: rem(49);
+    padding-bottom: rem(50);
+    #{$r}__img-box {
+      margin-bottom: rem(50);
+    }
+    #{$r}__title {
+      margin-bottom: rem(10);
+    }
+    #{$r}__price {
+      font-size: rem(36);
+    }
+    #{$r}__btn-to-cart {
+      bottom: rem(54);
+    }
+    @include state-hover-focus {
+      #{$r}__title {
+        opacity: 1;
+      }
+    }
+    &[data-lbl] {
+      &::before {
+        font-size: rem(18);
+        padding: rem(10) rem(16) rem(8);
+        top: rem(21);
+      }
+    }
+  }
+}

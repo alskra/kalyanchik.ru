@@ -1,6 +1,13 @@
 // Colors
 $color-active: #fe5438;
-$color-text: #232323;
+$color-text: black;
+$color-black: #232323;
+$color-gray: #efefef;
+$color-gray-1: #e1e1e1;
+$color-hit: #f774bb;
+$color-new: #0c98e8;
+$color-sale: #f92d05;
+$color-active-dark: #ed4429;
 
 // Customization Bootstrap
 $spacer: 1rem;
@@ -12,16 +19,19 @@ $grid-breakpoints: (
   xs: 0,
   sm: 576px,
   md: 768px,
-  lg: 992px,
+  lg: 1024px,
   xl: 1360px
 );
+
 $grid-columns: 12;
 $grid-gutter-width: 20px;
 
+$transition-base: .2s ease-in-out;
+
 $font-family-base: 'Lato', sans-serif;
-$font-size-base: rem(18);
-$font-weight-base: 500;
-$line-height-base: (28/18);
+$font-size-base: rem(16);
+$font-weight-base: 400;
+$line-height-base: (24/16);
 
 $h1-font-size: $font-size-base * 2.5;
 $h2-font-size: $font-size-base * 2;

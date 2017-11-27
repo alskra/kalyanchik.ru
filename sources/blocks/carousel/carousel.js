@@ -1,22 +1,21 @@
 $(function () {
-  var $carouselLinks = $('.carousel-links'),
-    $carouselLinksSlick = $('.carousel-links__inner');
+  var $carouselSlick = $('.carousel__inner');
 
-  $carouselLinksSlick.slick({
+  $carouselSlick.slick({
     dots: true,
     arrows: true,
     infinite: true,
     speed: 300,
-    fade: false,
+    fade: true,
     cssEase: 'linear',
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
     //mobileFirst: true,
-    prevArrow: '<button type="button" class="slick-prev"><svg class="icon-svg-angle-right" role="img">' +
-    '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-svg-angle-right"></use>' +
+    prevArrow: '<button type="button" class="slick-prev"><svg class="icon-svg-right-arrow-angle" role="img">' +
+    '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-svg-right-arrow-angle"></use>' +
     '</svg></button>',
-    nextArrow: '<button type="button" class="slick-next"><svg class="icon-svg-angle-right" role="img">' +
-    '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-svg-angle-right"></use>' +
+    nextArrow: '<button type="button" class="slick-next"><svg class="icon-svg-right-arrow-angle" role="img">' +
+    '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-svg-right-arrow-angle"></use>' +
     '</svg></button>',
     autoplay: false,
     autoplaySpeed: 5000,
@@ -37,6 +36,6 @@ $(function () {
       }*/
     ]
   }).on('lazyLoaded', function (event, slick, image, imageSource) {
-    $(image).closest('.carousel-links__item').removeClass('loading');
+    $(image).closest('.carousel__item').removeClass('loading');
   });
 });

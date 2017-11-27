@@ -1,16 +1,38 @@
 mixin header
   +b.HEADER.header&attributes(attributes)
-    .container-fluid
-      .row
-        +e.__col-1.col-12.col-lg-4
-          +e.__tel
-            +e.__tel-icon
-            +e.A.__tel-lnk(href='tel:+79251000399') + 7 (925) 100-03-99
-            br
-            | Звонки принимаем круглосуточно!
-        +e.__col-2.col-12.col-lg-4
+    +e.__inn-top
+      +e.__container.container-fluid
+        +e.__tel
+          +e.A.__tel-lnk(href='tel:+79251000399' title='Позвонить')
+            span.d-none.d-lg-inline + 7 (925) 100-03-99
+          span.d-none.d-lg-block Звонки принимаем круглосуточно!
+        +e.__col-center
           +b.A.logo.__logo(href=pageList.index.url title=$.package.description)
-            +e.IMG.__img(src='static/images/logo.png' alt=$.package.description)
-
-        +e.__col-3.col-12.col-lg-4
+              +e.IMG.__img(src='static/images/logo.png' alt=$.package.description)
+        +e.__opt--cart
+          strong.d-none.d-lg-block Ваша корзина
+          +e.A.__opt-lnk(href='javascript:' title='Перейти в корзину')
+            +e.SPAN.__opt-number 12 #[span.d-none.d-lg-inline товаров]
+        +e.__opt--user
+          strong.d-none.d-lg-block Личный кабинет
+          +e.A.__opt-lnk(href='javascript:' title='Войти')
+            span.d-none.d-lg-inline Войти
+          span.d-none.d-lg-inline /
+          +e.A.__opt-lnk(href='javascript:' title='Зарегистрироваться')
+            span.d-none.d-lg-inline Зарегистрироваться
+        +e.BUTTON.__menu-toggle.d-lg-none
+    +e.__inn-bottom.d-lg-block
+      .container-fluid
+        +b.NAV.menu.__menu
+          -
+            var menuList = ['О нас',
+            'Каталог товаров',
+            'Акции и спецпредложения',
+            'Доставка и оплата',
+            'Полезные статьи',
+            'Отзывы клиентов',
+            'Наши контакты'];
+          each item, i in menuList
+            +e.__item
+              +e.A.__lnk(class={'--current': i === 0} href='javascript:')= item
     block

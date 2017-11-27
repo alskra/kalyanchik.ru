@@ -1,10 +1,10 @@
 'use strict';
 
 module.exports = function () {
-  $.gulp.task('images', $.gulp.parallel(
+  $.gulp.task('images', $.gulp.series(
     function () {
       return $.combiner.obj([
-        $.gulp.src(['sources/images/**/*.*', '!sources/images/svg-icons/**']),
+        $.gulp.src(['sources/images/**/*.*']),
         $.gp.newer('build/static/images'),
         $.gp.imagemin([
           $.gp.imagemin.gifsicle({interlaced: true}),
@@ -26,10 +26,7 @@ module.exports = function () {
     },
     function () {
       return $.combiner.obj([
-        $.gulp.src(['sources/images/svg-icons/**/*.svg']),
-        $.gp.imagemin([
-          $.gp.imagemin.svgo({plugins: [{removeViewBox: false}]})
-        ]),
+        $.gulp.src(['build/static/images/svg-icons/**/*.svg']),
         $.gp.svgSymbols(
           {
             id: 'icon-svg-%f',

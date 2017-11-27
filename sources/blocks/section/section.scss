@@ -1,3 +1,28 @@
 .section {
+  $r: &;
+  padding-bottom: rem(50);
 
+  &__header {
+    background: $color-gray;
+    text-align: center;
+    padding: rem(43) 0;
+    margin-bottom: rem(50);
+  }
+
+  &__title {
+    font-size: rem(30);
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  &--style-dark {
+    background-color: #292929;
+    #{$r}__header {
+      background-color: $color-black;
+    }
+    #{$r}__title {
+      color: darkgrey;
+    }
+  }
 }

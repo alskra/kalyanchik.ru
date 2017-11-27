@@ -1,33 +1,201 @@
 .header {
-  color: #141414;
-  background-color: #efefef;
-  padding-top: rem(27);
-  padding-bottom: rem(40);
+  &__inn-top {
+    color: #141414;
+    background-color: $color-gray;
+    padding-top: rem(43);
+    padding-bottom: rem(43);
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
 
   &__tel {
+    flex: none;
+    width: 40%;
     color: #404040;
     font-size: rem(13);
     font-weight: 400;
     line-height: 1.2;
+    white-space: nowrap;
+    padding-left: rem(32);
+    background: embed-svg('svg-icons/call-answer.svg') no-repeat 0 #{rem(5)}/#{rem(19)} #{rem(20)};
+
+    @include media-breakpoint-down(md) {
+      padding: 0;
+      width: rem(40);
+      height: rem(40);
+      background-position: 50% 50%;
+      margin-left: -15px;
+    }
 
     &-lnk {
       display: inline-block;
       vertical-align: top;
       color: #141414;
       text-decoration: none;
+      font-size: rem(26);
+      font-weight: 700;
       @include state-hover-focus {
         color: #141414;
         text-decoration: none;
       }
+
+      @include media-breakpoint-down(md) {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 
-  &__col-2 {
-    text-align: center;
+  &__col-center {
+    flex: none;
+    width: 20%;
+    padding: 0 rem(20);
+    display: flex;
+    justify-content: center;
+
+    @include media-breakpoint-down(md) {
+      order: 1;
+      flex: 0 1 auto;
+      width: auto;
+      padding: 0 rem(10);
+      overflow: hidden;
+      margin: 0 auto;
+    }
   }
 
   &__logo {
     width: 221px;
-    vertical-align: top;
+    max-width: 100%;
+  }
+
+  &__opt {
+    flex: none;
+    padding-left: rem(35);
+    padding-top: rem(2);
+    font-size: rem(13);
+    font-weight: 400;
+    line-height: 1.2;
+    white-space: nowrap;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: rem(23);
+      height: rem(20);
+      background: none no-repeat 50% 50%/contain;
+    }
+    strong {
+      font-size: rem(16);
+      margin-bottom: rem(3);
+    }
+
+    &--cart {
+      margin-left: auto;
+      &::before {
+        background-image: embed-svg('svg-icons/shopping-basket.svg');
+      }
+    }
+
+    &--user {
+      margin-left: rem(40);
+      &::before {
+        background-image: embed-svg('svg-icons/user-shape.svg');
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      padding: 0;
+      width: rem(40);
+      height: rem(40);
+      &::before {
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+      }
+
+      &--cart {
+        margin-left: rem(5);
+      }
+
+      &--user {
+        order: 1;
+        margin-left: 0;
+      }
+    }
+
+    &-lnk {
+      color: inherit;
+      text-decoration: none;
+      transition: $transition-base;
+      @include state-hover-focus {
+        color: $color-active;
+        text-decoration: none;
+      }
+
+      @include media-breakpoint-down(md) {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 1;
+      }
+    }
+
+    &-number {
+      @include media-breakpoint-down(md) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: rem(10);
+        line-height: 1;
+        padding: rem(3) rem(3) rem(2);
+        background: $color-active;
+        color: white;
+        border-radius: rem(7.5);
+        min-width: rem(15);
+      }
+    }
+  }
+
+  &__menu-toggle {
+    order: 1;
+    flex: none;
+    padding: 0;
+    width: rem(40);
+    height: rem(40);
+    border: 0;
+    background: embed-svg('svg-icons/menu-button-of-three-horizontal-lines.svg') no-repeat 50% 50%/#{rem(20)} auto;
+    margin-left: rem(5);
+    margin-right: -15px;
+
+    &--open {
+      background-image: embed-svg('svg-icons/close-cross.svg');
+      background-size: rem(18) auto;
+    }
+  }
+
+  &__inn-bottom {
+    background-color: $color-black;
+
+    @include media-breakpoint-down(md) {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      left: 0;
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    &__inn-top {
+      padding-top: rem(10);
+      padding-bottom: rem(10);
+    }
   }
 }

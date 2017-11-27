@@ -1,0 +1,99 @@
+.carousel-1 {
+  position: relative;
+  &::before, &::after {
+    content: '';
+    display: table;
+  }
+  .slick-list {
+    overflow: visible;
+    margin: 0 -10px;
+  }
+  .slick-slide {
+    margin: 0 10px;
+  }
+  .slick-arrow {
+    position: absolute;
+    top: rem(278);
+    z-index: 10;
+    border: 0;
+    padding: 0;
+    transition: $transition-base;
+    background: none;
+    font-size: rem(53);
+    line-height: 1;
+    fill: white;
+    opacity: 0.2;
+    cursor: pointer;
+    .icon-svg-right-arrow-angle {
+      vertical-align: top;
+    }
+    @include state-hover-focus {
+      opacity: 1;
+    }
+  }
+  .slick-prev {
+    left: 20px;
+    transform: rotateY(-180deg);
+  }
+  .slick-next {
+    right: 20px;
+  }
+  .slick-dots {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0;
+    color: transparent;
+    margin: 0 rem(-7) rem(-14);
+    li {
+      flex: none;
+      margin: 0 rem(7) rem(14);
+      &.slick-active {
+        button {
+          background: $color-active;
+          cursor: default;
+        }
+      }
+    }
+    button {
+      cursor: pointer;
+      transition: $transition-base;
+      border: 0;
+      padding: 0;
+      width: rem(15);
+      height: rem(15);
+      background-color: #e0e0e0;
+      border-radius: 50%;
+      @include state-hover-focus {
+        background: $color-active;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .slick-dots {
+      justify-content: center;
+    }
+  }
+
+  &__inner {
+    position: static;
+    overflow: hidden;
+    margin: rem(-20) rem(-20) rem(30);
+    padding: 0 rem(20);
+  }
+
+  &__item {
+    margin: rem(20) 0;
+    display: none !important;
+    .slick-initialized & {
+      display: block !important;
+    }
+  }
+
+  &__dots {
+    padding-bottom: rem(17);
+  }
+}

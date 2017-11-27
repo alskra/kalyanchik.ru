@@ -2,7 +2,7 @@
   min-width: 320px;
   ::selection {
     color: white;
-    background: $blue;
+    background: $color-text;
   }
 
   &__body {
@@ -19,10 +19,25 @@
 
   &__header {
     flex: none;
+    position: relative;
+    z-index: $zindex-fixed;
+
+    @include media-breakpoint-down(md) {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: rem(60);
+      box-shadow: 0 rem(2) rem(3) rgba(black, 0.15);
+    }
   }
 
   &__main {
     flex: none;
+
+    @include media-breakpoint-down(md) {
+      margin-top: rem(60);
+    }
   }
 
   &__footer {

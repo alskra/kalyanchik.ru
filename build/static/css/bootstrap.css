@@ -23,7 +23,7 @@
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
-  --breakpoint-lg: 992px;
+  --breakpoint-lg: 1024px;
   --breakpoint-xl: 1360px;
   --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   --font-family-monospace: "SFMono-Regular",Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace
@@ -119,10 +119,10 @@ section {
 body {
   margin: 0;
   font-family: "Lato",sans-serif;
-  font-size: 1.125rem;
-  font-weight: 500;
-  line-height: 1.55556;
-  color: #232323;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000;
   text-align: left;
   background-color: #fff
 }
@@ -402,30 +402,30 @@ h6 {
 }
 .h1,
 h1 {
-  font-size: 2.8125rem
+  font-size: 2.5rem
 }
 .h2,
 h2 {
-  font-size: 2.25rem
+  font-size: 2rem
 }
 .h3,
 h3 {
-  font-size: 1.96875rem
+  font-size: 1.75rem
 }
 .h4,
 h4 {
-  font-size: 1.6875rem
+  font-size: 1.5rem
 }
 .h5,
 h5 {
-  font-size: 1.40625rem
+  font-size: 1.25rem
 }
 .h6,
 h6 {
-  font-size: 1.125rem
+  font-size: 1rem
 }
 .lead {
-  font-size: 1.40625rem;
+  font-size: 1.25rem;
   font-weight: 300
 }
 .display-1 {
@@ -484,7 +484,7 @@ mark {
 }
 .blockquote {
   margin-bottom: 1rem;
-  font-size: 1.40625rem
+  font-size: 1.25rem
 }
 .blockquote-footer {
   display: block;
@@ -584,7 +584,7 @@ pre code {
     max-width: 720px
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   .container {
     max-width: 960px
   }
@@ -1260,7 +1260,7 @@ pre code {
     margin-left: 91.66667%
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   .col-lg {
     -ms-flex-preferred-size: 0;
     flex-basis: 0;
@@ -1843,7 +1843,7 @@ pre code {
     border: 0
   }
 }
-@media (max-width: 991px) {
+@media (max-width: 1023px) {
   .table-responsive-lg {
     display: block;
     width: 100%;
@@ -1881,8 +1881,8 @@ pre code {
   display: block;
   width: 100%;
   padding: 0.375rem 0.75rem;
-  font-size: 1.125rem;
-  line-height: 1.55556;
+  font-size: 1rem;
+  line-height: 1.5;
   color: #495057;
   background-color: #fff;
   background-image: none;
@@ -1928,7 +1928,7 @@ pre code {
   opacity: 1
 }
 select.form-control:not([size]):not([multiple]) {
-  height: calc(2.5rem + 2px)
+  height: calc(2.25rem + 2px)
 }
 select.form-control:focus::-ms-value {
   color: #495057;
@@ -1942,31 +1942,31 @@ select.form-control:focus::-ms-value {
   padding-top: calc(0.375rem + 1px);
   padding-bottom: calc(0.375rem + 1px);
   margin-bottom: 0;
-  line-height: 1.55556
+  line-height: 1.5
 }
 .col-form-label-lg {
   padding-top: calc(0.5rem + 1px);
   padding-bottom: calc(0.5rem + 1px);
-  font-size: 1.40625rem;
+  font-size: 1.25rem;
   line-height: 1.5
 }
 .col-form-label-sm {
   padding-top: calc(0.25rem + 1px);
   padding-bottom: calc(0.25rem + 1px);
-  font-size: 0.98438rem;
+  font-size: 0.875rem;
   line-height: 1.5
 }
 .col-form-legend {
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
   margin-bottom: 0;
-  font-size: 1.125rem
+  font-size: 1rem
 }
 .form-control-plaintext {
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
   margin-bottom: 0;
-  line-height: 1.55556;
+  line-height: 1.5;
   background-color: transparent;
   border: solid transparent;
   border-width: 1px 0
@@ -1987,7 +1987,7 @@ select.form-control:focus::-ms-value {
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn {
   padding: 0.25rem 0.5rem;
-  font-size: 0.98438rem;
+  font-size: 0.875rem;
   line-height: 1.5;
   border-radius: 0.2rem
 }
@@ -1995,14 +1995,14 @@ select.form-control:focus::-ms-value {
 .input-group-sm > select.form-control:not([size]):not([multiple]),
 .input-group-sm > select.input-group-addon:not([size]):not([multiple]),
 select.form-control-sm:not([size]):not([multiple]) {
-  height: calc(1.97656rem + 2px)
+  height: calc(1.8125rem + 2px)
 }
 .form-control-lg,
 .input-group-lg > .form-control,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn {
   padding: 0.5rem 1rem;
-  font-size: 1.40625rem;
+  font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem
 }
@@ -2010,7 +2010,7 @@ select.form-control-sm:not([size]):not([multiple]) {
 .input-group-lg > select.form-control:not([size]):not([multiple]),
 .input-group-lg > select.input-group-addon:not([size]):not([multiple]),
 select.form-control-lg:not([size]):not([multiple]) {
-  height: calc(3.10938rem + 2px)
+  height: calc(2.875rem + 2px)
 }
 .form-group {
   margin-bottom: 1rem
@@ -2313,8 +2313,8 @@ select.form-control-lg:not([size]):not([multiple]) {
   user-select: none;
   border: 1px solid transparent;
   padding: 0.375rem 0.75rem;
-  font-size: 1.125rem;
-  line-height: 1.55556;
+  font-size: 1rem;
+  line-height: 1.5;
   border-radius: 0.25rem;
   -webkit-transition: background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;
@@ -2839,14 +2839,14 @@ fieldset[disabled] a.btn {
 .btn-group-lg > .btn,
 .btn-lg {
   padding: 0.5rem 1rem;
-  font-size: 1.40625rem;
+  font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem
 }
 .btn-group-sm > .btn,
 .btn-sm {
   padding: 0.25rem 0.5rem;
-  font-size: 0.98438rem;
+  font-size: 0.875rem;
   line-height: 1.5;
   border-radius: 0.2rem
 }
@@ -2918,8 +2918,8 @@ tbody.collapse.show {
   min-width: 10rem;
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
-  font-size: 1.125rem;
-  color: #232323;
+  font-size: 1rem;
+  color: #000;
   text-align: left;
   list-style: none;
   background-color: #fff;
@@ -2988,7 +2988,7 @@ tbody.collapse.show {
   display: block;
   padding: 0.5rem 1.5rem;
   margin-bottom: 0;
-  font-size: 0.98438rem;
+  font-size: 0.875rem;
   color: #868e96;
   white-space: nowrap
 }
@@ -3189,9 +3189,9 @@ tbody.collapse.show {
 .input-group-addon {
   padding: 0.375rem 0.75rem;
   margin-bottom: 0;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 400;
-  line-height: 1.55556;
+  line-height: 1.5;
   color: #495057;
   text-align: center;
   background-color: #e9ecef;
@@ -3202,14 +3202,14 @@ tbody.collapse.show {
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .input-group-addon.btn {
   padding: 0.25rem 0.5rem;
-  font-size: 0.98438rem;
+  font-size: 0.875rem;
   border-radius: 0.2rem
 }
 .input-group-addon.form-control-lg,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .input-group-addon.btn {
   padding: 0.5rem 1rem;
-  font-size: 1.40625rem;
+  font-size: 1.25rem;
   border-radius: 0.3rem
 }
 .input-group-addon input[type="checkbox"],
@@ -3290,7 +3290,7 @@ tbody.collapse.show {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  min-height: 1.55556rem;
+  min-height: 1.5rem;
   padding-left: 1.5rem;
   margin-right: 1rem
 }
@@ -3319,7 +3319,7 @@ tbody.collapse.show {
 }
 .custom-control-indicator {
   position: absolute;
-  top: 0.27778rem;
+  top: 0.25rem;
   left: 0;
   display: block;
   width: 1rem;
@@ -3368,9 +3368,9 @@ tbody.collapse.show {
 .custom-select {
   display: inline-block;
   max-width: 100%;
-  height: calc(2.5rem + 2px);
+  height: calc(2.25rem + 2px);
   padding: 0.375rem 1.75rem 0.375rem 0.75rem;
-  line-height: 1.55556;
+  line-height: 1.5;
   color: #495057;
   vertical-align: middle;
   background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
@@ -3401,7 +3401,7 @@ tbody.collapse.show {
   opacity: 0
 }
 .custom-select-sm {
-  height: calc(1.97656rem + 2px);
+  height: calc(1.8125rem + 2px);
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
   font-size: 75%
@@ -3410,13 +3410,13 @@ tbody.collapse.show {
   position: relative;
   display: inline-block;
   max-width: 100%;
-  height: calc(2.5rem + 2px);
+  height: calc(2.25rem + 2px);
   margin-bottom: 0
 }
 .custom-file-input {
   min-width: 14rem;
   max-width: 100%;
-  height: calc(2.5rem + 2px);
+  height: calc(2.25rem + 2px);
   margin: 0;
   opacity: 0
 }
@@ -3430,9 +3430,9 @@ tbody.collapse.show {
   right: 0;
   left: 0;
   z-index: 5;
-  height: calc(2.5rem + 2px);
+  height: calc(2.25rem + 2px);
   padding: 0.375rem 0.75rem;
-  line-height: 1.55556;
+  line-height: 1.5;
   color: #495057;
   pointer-events: none;
   -webkit-user-select: none;
@@ -3453,9 +3453,9 @@ tbody.collapse.show {
   bottom: -1px;
   z-index: 6;
   display: block;
-  height: calc(2.5rem + 2px);
+  height: calc(2.25rem + 2px);
   padding: 0.375rem 0.75rem;
-  line-height: 1.55556;
+  line-height: 1.5;
   color: #495057;
   background-color: #e9ecef;
   border: 1px solid #ced4da;
@@ -3575,10 +3575,10 @@ tbody.collapse.show {
 }
 .navbar-brand {
   display: inline-block;
-  padding-top: 0.28125rem;
-  padding-bottom: 0.28125rem;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
   margin-right: 1rem;
-  font-size: 1.40625rem;
+  font-size: 1.25rem;
   line-height: inherit;
   white-space: nowrap
 }
@@ -3623,7 +3623,7 @@ tbody.collapse.show {
 }
 .navbar-toggler {
   padding: 0.25rem 0.75rem;
-  font-size: 1.40625rem;
+  font-size: 1.25rem;
   line-height: 1;
   background: transparent;
   border: 1px solid transparent;
@@ -3750,14 +3750,14 @@ tbody.collapse.show {
     bottom: 100%
   }
 }
-@media (max-width: 991px) {
+@media (max-width: 1023px) {
   .navbar-expand-lg > .container,
   .navbar-expand-lg > .container-fluid {
     padding-right: 0;
     padding-left: 0
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   .navbar-expand-lg {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -4286,7 +4286,7 @@ tbody.collapse.show {
 }
 .pagination-lg .page-link {
   padding: 0.75rem 1.5rem;
-  font-size: 1.40625rem;
+  font-size: 1.25rem;
   line-height: 1.5
 }
 .pagination-lg .page-item:first-child .page-link {
@@ -4299,7 +4299,7 @@ tbody.collapse.show {
 }
 .pagination-sm .page-link {
   padding: 0.25rem 0.5rem;
-  font-size: 0.98438rem;
+  font-size: 0.875rem;
   line-height: 1.5
 }
 .pagination-sm .page-item:first-child .page-link {
@@ -4559,7 +4559,7 @@ tbody.collapse.show {
   display: flex;
   height: 1rem;
   overflow: hidden;
-  font-size: 0.84375rem;
+  font-size: 0.75rem;
   background-color: #e9ecef;
   border-radius: 0.25rem
 }
@@ -4620,7 +4620,7 @@ tbody.collapse.show {
   background-color: #f8f9fa
 }
 .list-group-item-action:active {
-  color: #232323;
+  color: #000;
   background-color: #e9ecef
 }
 .list-group-item {
@@ -4836,7 +4836,7 @@ button.list-group-item-dark.active {
 }
 .close {
   float: right;
-  font-size: 1.6875rem;
+  font-size: 1.5rem;
   font-weight: 700;
   line-height: 1;
   color: #000;
@@ -4943,7 +4943,7 @@ button.close {
 }
 .modal-title {
   margin-bottom: 0;
-  line-height: 1.55556
+  line-height: 1.5
 }
 .modal-body {
   position: relative;
@@ -4987,7 +4987,7 @@ button.close {
     max-width: 300px
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   .modal-lg {
     max-width: 800px
   }
@@ -5000,7 +5000,7 @@ button.close {
   font-family: "Lato",sans-serif;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.55556;
+  line-height: 1.5;
   text-align: left;
   text-align: start;
   text-decoration: none;
@@ -5011,7 +5011,7 @@ button.close {
   word-spacing: normal;
   white-space: normal;
   line-break: auto;
-  font-size: 0.98438rem;
+  font-size: 0.875rem;
   word-wrap: break-word;
   opacity: 0
 }
@@ -5108,7 +5108,7 @@ button.close {
   font-family: "Lato",sans-serif;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.55556;
+  line-height: 1.5;
   text-align: left;
   text-align: start;
   text-decoration: none;
@@ -5119,7 +5119,7 @@ button.close {
   word-spacing: normal;
   white-space: normal;
   line-break: auto;
-  font-size: 0.98438rem;
+  font-size: 0.875rem;
   word-wrap: break-word;
   background-color: #fff;
   background-clip: padding-box;
@@ -5262,7 +5262,7 @@ button.close {
 .popover-header {
   padding: 0.5rem 0.75rem;
   margin-bottom: 0;
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: #000;
   background-color: #f7f7f7;
   border-bottom: 1px solid #ebebeb;
@@ -5274,7 +5274,7 @@ button.close {
 }
 .popover-body {
   padding: 0.5rem 0.75rem;
-  color: #232323
+  color: #000
 }
 .carousel {
   position: relative
@@ -5707,7 +5707,7 @@ a.bg-dark:hover {
     display: inline-flex!important
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   .d-lg-none {
     display: none!important
   }
@@ -6241,7 +6241,7 @@ a.bg-dark:hover {
     align-self: stretch!important
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   .flex-lg-row {
     -webkit-box-orient: horizontal!important;
     -webkit-box-direction: normal!important;
@@ -6542,7 +6542,7 @@ a.bg-dark:hover {
     float: none!important
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   .float-lg-left {
     float: left!important
   }
@@ -7400,7 +7400,7 @@ a.bg-dark:hover {
     margin-left: auto!important
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   .m-lg-0 {
     margin: 0!important
   }
@@ -7940,7 +7940,7 @@ a.bg-dark:hover {
     text-align: center!important
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   .text-lg-left {
     text-align: left!important
   }

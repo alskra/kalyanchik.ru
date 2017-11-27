@@ -1,5 +1,45 @@
 mixin footer
   +b.FOOTER.footer&attributes(attributes)
-    +e.__container.container
-
+    +e.__inn-top
+      +e.__container.container-fluid
+        .row
+          .col-12.col-md-6.col-lg-3
+            +e.NAV.__nav
+              +e.__nav-title Каталог товаров
+              -
+                var navList = ['Безникотиновая смесь для кальяна',
+                'Кальяны',
+                'Курительные камни',
+                'Табак для кальяна',
+                'Уголь для кальяна',
+                'Аксессуары'];
+              each item, i in navList
+                +e.__nav-item
+                  +e.A.__nav-lnk--small(href='javascript:')= item
+          .col-12.col-md-6.col-lg-3
+            +e.NAV.__nav
+              -
+                var navList = ['Каталог товаров',
+                'О нас',
+                'Акции и спецпредложения',
+                'Доставка и оплата',
+                'Полезные статьи',
+                'Отзывы клиентов',
+                'Наши контакты'];
+              each item, i in navList
+                +e.__nav-item
+                  +e.A.__nav-lnk(href='javascript:')= item
+          .col-12.col-lg-6
+            +e.FORM.__search(action='')
+              +e.INPUT.__search-field(type='search' placeholder='Поиск товаров по сайту')
+              +e.BUTTON.__search-btn
+                +icon-svg#magnifying-glass.__search-btn-icon
+            +e.__tel
+              +e.A.__tel-lnk(href='tel:+79251000399' title='Позвонить') + 7 (925) 100-03-99
+              div Звонки принимаем круглосуточно!
+            +e.__opt
+              +b.A.button(href='javascript:') Заказать обратный звонок
+    +e.__inn-bottom
+      .container-fluid.text-center
+        p © Кальянчик.ру, 2011-2014
     block

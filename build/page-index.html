@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html class="root no-js" lang="ru">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no" />
     <title>Главная — Кальянчик.ру</title>
     <!-- Meta-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="author" content="" />
     <!-- Favicons-->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <!-- CSS-->
-    <link rel="stylesheet" href="static/css/bootstrap.css" />
-    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="static/css/main.min.css" />
     <!-- JS Inline-->
+    <!-- Insert svg-symbols-->
     <script>
       var ajax = new XMLHttpRequest();
       ajax.open("GET", "static/images/svg-symbols.svg", true);
@@ -25,6 +26,7 @@
         document.body.insertBefore(div, document.body.childNodes[0]);
       };
     </script>
+    <!-- Fix object-fit <img>-->
     <script>
       function fitImg(e)
       {
@@ -37,29 +39,487 @@
   <body class="root__body">
     <div class="root__body-layout">
       <header class="header root__header">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="header__col-1 col-12 col-lg-4">
-              <div class="header__tel">
-                <div class="header__tel-icon"></div>
-                <a class="header__tel-lnk" href="tel:+79251000399">+ 7 (925) 100-03-99</a>
-                <br/>Звонки принимаем круглосуточно!</div>
+        <div class="header__inn-top">
+          <div class="header__container container-fluid">
+            <div class="header__tel">
+              <a class="header__tel-lnk" href="tel:+79251000399" title="Позвонить">
+                <span class="d-none d-lg-inline">+ 7 (925) 100-03-99</span>
+              </a>
+              <span class="d-none d-lg-block">Звонки принимаем круглосуточно!</span>
             </div>
-            <div class="header__col-2 col-12 col-lg-4">
+            <div class="header__col-center">
               <a class="logo header__logo" href="page-index.html" title="Кальянчик.ру">
                 <img class="logo__img" src="static/images/logo.png" alt="Кальянчик.ру" title="" />
               </a>
             </div>
-            <div class="header__col-3 col-12 col-lg-4"></div>
+            <div class="header__opt header__opt--cart">
+              <strong class="d-none d-lg-block">Ваша корзина</strong>
+              <a class="header__opt-lnk" href="javascript:" title="Перейти в корзину">
+                <span class="header__opt-number">12
+                  <span class="d-none d-lg-inline">товаров</span>
+                </span>
+              </a>
+            </div>
+            <div class="header__opt header__opt--user">
+              <strong class="d-none d-lg-block">Личный кабинет</strong>
+              <a class="header__opt-lnk" href="javascript:" title="Войти">
+                <span class="d-none d-lg-inline">Войти</span>
+              </a>
+              <span class="d-none d-lg-inline">/</span>
+              <a class="header__opt-lnk" href="javascript:" title="Зарегистрироваться">
+                <span class="d-none d-lg-inline">Зарегистрироваться</span>
+              </a>
+            </div>
+            <button class="header__menu-toggle d-lg-none"></button>
+          </div>
+        </div>
+        <div class="header__inn-bottom d-lg-block">
+          <div class="container-fluid">
+            <nav class="menu header__menu">
+              <div class="menu__item">
+                <a class="menu__lnk menu__lnk--current" href="javascript:">О нас</a>
+              </div>
+              <div class="menu__item">
+                <a class="menu__lnk" href="javascript:">Каталог товаров</a>
+              </div>
+              <div class="menu__item">
+                <a class="menu__lnk" href="javascript:">Акции и спецпредложения</a>
+              </div>
+              <div class="menu__item">
+                <a class="menu__lnk" href="javascript:">Доставка и оплата</a>
+              </div>
+              <div class="menu__item">
+                <a class="menu__lnk" href="javascript:">Полезные статьи</a>
+              </div>
+              <div class="menu__item">
+                <a class="menu__lnk" href="javascript:">Отзывы клиентов</a>
+              </div>
+              <div class="menu__item">
+                <a class="menu__lnk" href="javascript:">Наши контакты</a>
+              </div>
+            </nav>
           </div>
         </div>
       </header>
-      <div class="root__main"></div>
+      <div class="root__main">
+        <div class="carousel root__carousel">
+          <div class="carousel__inner" data-slick="{&quot;autoplay&quot;: true, &quot;autoplaySpeed&quot;: 5000}">
+            <div class="carousel__item">
+              <img class="carousel__img" data-lazy="assets/carousel/slide1.jpg" alt="" data-fit-img="cover" onload="fitImg(this)" role="presentation" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+              <div class="carousel__content">
+                <div class="carousel__title">Кальян Ager</div>
+                <div class="carousel__str-1">по цене</div>
+                <div class="carousel__str-2">5 450 р.
+                  <br class="d-md-none" />
+                  <small>6500 р.</small>
+                </div>
+                <a class="button-1 carousel__btn-to-cart" href="javascript:">Добавить в корзину</a>
+              </div>
+            </div>
+            <div class="carousel__item">
+              <img class="carousel__img" data-lazy="assets/carousel/slide1.jpg" alt="" data-fit-img="cover" onload="fitImg(this)" role="presentation" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+              <div class="carousel__content">
+                <div class="carousel__title">Длинный заголовок слайда 2</div>
+                <div class="carousel__str-1">по цене</div>
+                <div class="carousel__str-2">15 999 р.
+                  <br class="d-md-none" />
+                  <small>16500 р.</small>
+                </div>
+                <a class="button-1 carousel__btn-to-cart" href="javascript:">Добавить в корзину</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="section">
+          <header class="section__header">
+            <div class="container-fluid">
+              <h2 class="section__title">Популярные новинки месяца</h2>
+            </div>
+          </header>
+          <div class="container-fluid">
+            <div class="carousel-1">
+              <div class="carousel-1__inner" data-slick="{&quot;autoplay&quot;: true, &quot;autoplaySpeed&quot;: 7000}">
+                <a class="product carousel-1__item" href="javascript:" data-lbl="Hit">
+                  <div class="product__img-box">
+                    <img class="product__img" data-lazy="assets/products/product-1.jpg" alt="" data-fit-img="contain" onload="fitImg(this)" role="presentation" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                  </div>
+                  <h3 class="product__title">Кальян Ager (Brown) современный</h3>
+                  <div class="product__price">6 789 р.</div>
+                  <button class="button-1 button-1--size-product product__btn-to-cart">В корзину</button>
+                </a>
+                <a class="product carousel-1__item" href="javascript:" data-lbl="New">
+                  <div class="product__img-box">
+                    <img class="product__img" data-lazy="assets/products/product-2.jpg" alt="" data-fit-img="contain" onload="fitImg(this)" role="presentation" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                  </div>
+                  <h3 class="product__title">Кальян Ager (Purple)</h3>
+                  <div class="product__price">3 627 р.</div>
+                  <button class="button-1 button-1--size-product product__btn-to-cart">В корзину</button>
+                </a>
+                <a class="product carousel-1__item" href="javascript:" data-lbl="Sale">
+                  <div class="product__img-box">
+                    <img class="product__img" data-lazy="assets/products/product-1.jpg" alt="" data-fit-img="contain" onload="fitImg(this)" role="presentation" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                  </div>
+                  <h3 class="product__title">Кальян Ager (Brown) современный</h3>
+                  <div class="product__price">6 789 р.</div>
+                  <button class="button-1 button-1--size-product product__btn-to-cart">В корзину</button>
+                </a>
+                <a class="product carousel-1__item" href="javascript:" data-lbl="New">
+                  <div class="product__img-box">
+                    <img class="product__img" data-lazy="assets/products/product-2.jpg" alt="" data-fit-img="contain" onload="fitImg(this)" role="presentation" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                  </div>
+                  <h3 class="product__title">Кальян Ager (Purple)</h3>
+                  <div class="product__price">3 627 р.</div>
+                  <button class="button-1 button-1--size-product product__btn-to-cart">В корзину</button>
+                </a>
+                <a class="product carousel-1__item" href="javascript:" data-lbl="Hit">
+                  <div class="product__img-box">
+                    <img class="product__img" data-lazy="assets/products/product-1.jpg" alt="" data-fit-img="contain" onload="fitImg(this)" role="presentation" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                  </div>
+                  <h3 class="product__title">Кальян Ager (Brown) современный</h3>
+                  <div class="product__price">6 789 р.</div>
+                  <button class="button-1 button-1--size-product product__btn-to-cart">В корзину</button>
+                </a>
+                <a class="product carousel-1__item" href="javascript:" data-lbl="New">
+                  <div class="product__img-box">
+                    <img class="product__img" data-lazy="assets/products/product-2.jpg" alt="" data-fit-img="contain" onload="fitImg(this)" role="presentation" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                  </div>
+                  <h3 class="product__title">Кальян Ager (Purple)</h3>
+                  <div class="product__price">3 627 р.</div>
+                  <button class="button-1 button-1--size-product product__btn-to-cart">В корзину</button>
+                </a>
+                <a class="product carousel-1__item" href="javascript:" data-lbl="Sale">
+                  <div class="product__img-box">
+                    <img class="product__img" data-lazy="assets/products/product-1.jpg" alt="" data-fit-img="contain" onload="fitImg(this)" role="presentation" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                  </div>
+                  <h3 class="product__title">Кальян Ager (Brown) современный</h3>
+                  <div class="product__price">6 789 р.</div>
+                  <button class="button-1 button-1--size-product product__btn-to-cart">В корзину</button>
+                </a>
+                <a class="product carousel-1__item" href="javascript:" data-lbl="New">
+                  <div class="product__img-box">
+                    <img class="product__img" data-lazy="assets/products/product-2.jpg" alt="" data-fit-img="contain" onload="fitImg(this)" role="presentation" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                  </div>
+                  <h3 class="product__title">Кальян Ager (Purple)</h3>
+                  <div class="product__price">3 627 р.</div>
+                  <button class="button-1 button-1--size-product product__btn-to-cart">В корзину</button>
+                </a>
+              </div>
+              <div class="row align-items-end">
+                <div class="carousel-1__dots col-12 col-md-6"></div>
+                <div class="col-12 col-md-6 text-center text-md-right">
+                  <a class="button-1" href="javascript:">Перейти в каталог</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-about">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="section-about__col col-12 col-lg-4">
+                <article class="section-about__item">
+                  <div class="section-about__item-col-1">
+                    <img class="section-about__item-img" src="static/images/delivery.png" width="72" alt="Быстрая доставка" title="" />
+                  </div>
+                  <div class="section-about__item-col-2">
+                    <h2 class="section-about__item-title">Быстрая доставка</h2>
+                    <p class="section-about__item-desc">Мы гарантируем всем нашим покупателям быструю</p>
+                  </div>
+                </article>
+              </div>
+              <div class="section-about__col col-12 col-lg-4">
+                <article class="section-about__item">
+                  <div class="section-about__item-col-1">
+                    <img class="section-about__item-img" src="static/images/quality.png" width="69" alt="Качество товара" title="" />
+                  </div>
+                  <div class="section-about__item-col-2">
+                    <h2 class="section-about__item-title">Качество товара</h2>
+                    <p class="section-about__item-desc">У нас всегда свежий и только качественный товар</p>
+                  </div>
+                </article>
+              </div>
+              <div class="section-about__col col-12 col-lg-4">
+                <article class="section-about__item">
+                  <div class="section-about__item-col-1">
+                    <img class="section-about__item-img" src="static/images/best-price.png" width="69" alt="Лучшие цены" title="" />
+                  </div>
+                  <div class="section-about__item-col-2">
+                    <h2 class="section-about__item-title">Лучшие цены</h2>
+                    <p class="section-about__item-desc">У нас Вы найдете нужные Вам товары по хорошим ценам</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section">
+          <header class="section__header">
+            <div class="container-fluid">
+              <h2 class="section__title">Хиты продаж</h2>
+            </div>
+          </header>
+          <div class="container-fluid">
+            <div class="carousel-1">
+              <div class="carousel-1__inner" data-slick="{&quot;autoplay&quot;: true, &quot;autoplaySpeed&quot;: 7000}">
+                <a class="product carousel-1__item" href="javascript:" data-lbl="Hit">
+                  <div class="product__img-box">
+                    <img class="product__img" data-lazy="assets/products/product-3.jpg" alt="" data-fit-img="contain" onload="fitImg(this)" role="presentation" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                  </div>
+                  <h3 class="product__title">Табак для кальяна Al Fakher современный</h3>
+                  <div class="product__price">49 р.</div>
+                  <button class="button-1 button-1--size-product product__btn-to-cart">В корзину</button>
+                </a>
+                <a class="product carousel-1__item" href="javascript:" data-lbl="Hit">
+                  <div class="product__img-box">
+                    <img class="product__img" data-lazy="assets/products/product-4.jpg" alt="" data-fit-img="contain" onload="fitImg(this)" role="presentation" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                  </div>
+                  <h3 class="product__title">Табак для кальяна Al Fakher (Chocolate)</h3>
+                  <div class="product__price">97 р.</div>
+                  <button class="button-1 button-1--size-product product__btn-to-cart">В корзину</button>
+                </a>
+                <a class="product carousel-1__item" href="javascript:" data-lbl="Hit">
+                  <div class="product__img-box">
+                    <img class="product__img" data-lazy="assets/products/product-5.jpg" alt="" data-fit-img="contain" onload="fitImg(this)" role="presentation" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                  </div>
+                  <h3 class="product__title">Табак для кальяна Al Fakher (Mini)</h3>
+                  <div class="product__price">59 р.</div>
+                  <button class="button-1 button-1--size-product product__btn-to-cart">В корзину</button>
+                </a>
+                <a class="product carousel-1__item" href="javascript:" data-lbl="Hit">
+                  <div class="product__img-box">
+                    <img class="product__img" data-lazy="assets/products/product-6.jpg" alt="" data-fit-img="contain" onload="fitImg(this)" role="presentation" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                  </div>
+                  <h3 class="product__title">Табак для кальяна Al Fakher (Orange)</h3>
+                  <div class="product__price">87 р.</div>
+                  <button class="button-1 button-1--size-product product__btn-to-cart">В корзину</button>
+                </a>
+                <a class="product carousel-1__item" href="javascript:" data-lbl="Hit">
+                  <div class="product__img-box">
+                    <img class="product__img" data-lazy="assets/products/product-3.jpg" alt="" data-fit-img="contain" onload="fitImg(this)" role="presentation" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                  </div>
+                  <h3 class="product__title">Табак для кальяна Al Fakher современный</h3>
+                  <div class="product__price">49 р.</div>
+                  <button class="button-1 button-1--size-product product__btn-to-cart">В корзину</button>
+                </a>
+                <a class="product carousel-1__item" href="javascript:" data-lbl="Hit">
+                  <div class="product__img-box">
+                    <img class="product__img" data-lazy="assets/products/product-4.jpg" alt="" data-fit-img="contain" onload="fitImg(this)" role="presentation" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                  </div>
+                  <h3 class="product__title">Табак для кальяна Al Fakher (Chocolate)</h3>
+                  <div class="product__price">97 р.</div>
+                  <button class="button-1 button-1--size-product product__btn-to-cart">В корзину</button>
+                </a>
+                <a class="product carousel-1__item" href="javascript:" data-lbl="Hit">
+                  <div class="product__img-box">
+                    <img class="product__img" data-lazy="assets/products/product-5.jpg" alt="" data-fit-img="contain" onload="fitImg(this)" role="presentation" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                  </div>
+                  <h3 class="product__title">Табак для кальяна Al Fakher (Mini)</h3>
+                  <div class="product__price">59 р.</div>
+                  <button class="button-1 button-1--size-product product__btn-to-cart">В корзину</button>
+                </a>
+                <a class="product carousel-1__item" href="javascript:" data-lbl="Hit">
+                  <div class="product__img-box">
+                    <img class="product__img" data-lazy="assets/products/product-6.jpg" alt="" data-fit-img="contain" onload="fitImg(this)" role="presentation" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                  </div>
+                  <h3 class="product__title">Табак для кальяна Al Fakher (Orange)</h3>
+                  <div class="product__price">87 р.</div>
+                  <button class="button-1 button-1--size-product product__btn-to-cart">В корзину</button>
+                </a>
+              </div>
+              <div class="row align-items-end">
+                <div class="carousel-1__dots col-12 col-md-6"></div>
+                <div class="col-12 col-md-6 text-center text-md-right">
+                  <a class="button-1" href="javascript:">Перейти в каталог</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section--style-dark">
+          <header class="section__header">
+            <div class="container-fluid">
+              <h2 class="section__title">Акционные товары</h2>
+            </div>
+          </header>
+          <div class="container-fluid">
+            <div class="carousel-1">
+              <div class="carousel-1__inner" data-slick="{&quot;autoplay&quot;: true, &quot;autoplaySpeed&quot;: 7000, &quot;responsive&quot;: [{&quot;breakpoint&quot;:575,&quot;settings&quot;:{&quot;slidesToShow&quot;:2}},{&quot;breakpoint&quot;:767,&quot;settings&quot;:{&quot;slidesToShow&quot;:2}},{&quot;breakpoint&quot;:1023,&quot;settings&quot;:{&quot;slidesToShow&quot;:3}}]}">
+                <a class="product product--style-big carousel-1__item" href="javascript:" data-lbl="Sale">
+                  <div class="product__img-box">
+                    <img class="product__img" data-lazy="assets/products/product-7.jpg" alt="" data-fit-img="contain" onload="fitImg(this)" role="presentation" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                  </div>
+                  <h3 class="product__title">Табак для кальяна Al Fakher</h3>
+                  <div class="product__price">149 р.
+                    <span class="product__price-old">256 р.</span>
+                  </div>
+                  <button class="button-1 button-1--size-product product__btn-to-cart">Добавить в корзину</button>
+                </a>
+                <a class="product product--style-big carousel-1__item" href="javascript:" data-lbl="Sale">
+                  <div class="product__img-box">
+                    <img class="product__img" data-lazy="assets/products/product-7.jpg" alt="" data-fit-img="contain" onload="fitImg(this)" role="presentation" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                  </div>
+                  <h3 class="product__title">Табак для кальяна Al Fakher</h3>
+                  <div class="product__price">149 р.
+                    <span class="product__price-old">256 р.</span>
+                  </div>
+                  <button class="button-1 button-1--size-product product__btn-to-cart">Добавить в корзину</button>
+                </a>
+                <a class="product product--style-big carousel-1__item" href="javascript:" data-lbl="Sale">
+                  <div class="product__img-box">
+                    <img class="product__img" data-lazy="assets/products/product-8.jpg" alt="" data-fit-img="contain" onload="fitImg(this)" role="presentation" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                  </div>
+                  <h3 class="product__title">Кальян Mya Mozza 456</h3>
+                  <div class="product__price">4 649 р.
+                    <span class="product__price-old">5 256 р.</span>
+                  </div>
+                  <button class="button-1 button-1--size-product product__btn-to-cart">Добавить в корзину</button>
+                </a>
+                <a class="product product--style-big carousel-1__item" href="javascript:" data-lbl="Sale">
+                  <div class="product__img-box">
+                    <img class="product__img" data-lazy="assets/products/product-7.jpg" alt="" data-fit-img="contain" onload="fitImg(this)" role="presentation" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                  </div>
+                  <h3 class="product__title">Табак для кальяна Al Fakher</h3>
+                  <div class="product__price">149 р.
+                    <span class="product__price-old">256 р.</span>
+                  </div>
+                  <button class="button-1 button-1--size-product product__btn-to-cart">Добавить в корзину</button>
+                </a>
+                <a class="product product--style-big carousel-1__item" href="javascript:" data-lbl="Sale">
+                  <div class="product__img-box">
+                    <img class="product__img" data-lazy="assets/products/product-7.jpg" alt="" data-fit-img="contain" onload="fitImg(this)" role="presentation" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                  </div>
+                  <h3 class="product__title">Табак для кальяна Al Fakher</h3>
+                  <div class="product__price">149 р.
+                    <span class="product__price-old">256 р.</span>
+                  </div>
+                  <button class="button-1 button-1--size-product product__btn-to-cart">Добавить в корзину</button>
+                </a>
+                <a class="product product--style-big carousel-1__item" href="javascript:" data-lbl="Sale">
+                  <div class="product__img-box">
+                    <img class="product__img" data-lazy="assets/products/product-8.jpg" alt="" data-fit-img="contain" onload="fitImg(this)" role="presentation" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                  </div>
+                  <h3 class="product__title">Кальян Mya Mozza 456</h3>
+                  <div class="product__price">4 649 р.
+                    <span class="product__price-old">5 256 р.</span>
+                  </div>
+                  <button class="button-1 button-1--size-product product__btn-to-cart">Добавить в корзину</button>
+                </a>
+              </div>
+              <div class="row align-items-end">
+                <div class="carousel-1__dots col-12 col-md-6"></div>
+                <div class="col-12 col-md-6 text-center text-md-right">
+                  <a class="button-1" href="javascript:">Перейти в каталог</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section">
+          <header class="section__header">
+            <div class="container-fluid">
+              <h2 class="section__title">Немного о компании</h2>
+            </div>
+          </header>
+          <div class="container-fluid text-center">
+            <div class="row">
+              <div class="col-12 col-xl-8 offset-xl-2">
+                <div class="content">
+                  <p>
+                    <strong>Вы уже давно не представляете своей жизни без кальяна, или только решили внести в свой дом восточную изысканность и шарм, а может, хотите купить кальян для подарка, тогда вы обратились точно по адресу.</strong>
+                  </p>
+                  <p>В специализированном Интернет-магазине www.kaljanchik.ru, Вы найдете кальян, который будет удовлетворять все Ваши пожелания! В разделе «Кальяны» представлен огромный выбор приборов для курения из разных уголков мира (Сирия, Египет,
+                    Китай, Ливан), от самых маленьких и дешевых, до дорогих и изысканных. В нашем ассортименте есть всемирно известные бренды.</p>
+                  <div> </div>
+                </div>
+                <a class="button-1" href="javascript:">Подробнее о нашей компании</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
       <footer class="footer root__footer">
-        <div class="footer__container container"></div>
+        <div class="footer__inn-top">
+          <div class="footer__container container-fluid">
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-3">
+                <nav class="footer__nav">
+                  <div class="footer__nav-title">Каталог товаров</div>
+                  <div class="footer__nav-item">
+                    <a class="footer__nav-lnk footer__nav-lnk--small" href="javascript:">Безникотиновая смесь для кальяна</a>
+                  </div>
+                  <div class="footer__nav-item">
+                    <a class="footer__nav-lnk footer__nav-lnk--small" href="javascript:">Кальяны</a>
+                  </div>
+                  <div class="footer__nav-item">
+                    <a class="footer__nav-lnk footer__nav-lnk--small" href="javascript:">Курительные камни</a>
+                  </div>
+                  <div class="footer__nav-item">
+                    <a class="footer__nav-lnk footer__nav-lnk--small" href="javascript:">Табак для кальяна</a>
+                  </div>
+                  <div class="footer__nav-item">
+                    <a class="footer__nav-lnk footer__nav-lnk--small" href="javascript:">Уголь для кальяна</a>
+                  </div>
+                  <div class="footer__nav-item">
+                    <a class="footer__nav-lnk footer__nav-lnk--small" href="javascript:">Аксессуары</a>
+                  </div>
+                </nav>
+              </div>
+              <div class="col-12 col-md-6 col-lg-3">
+                <nav class="footer__nav">
+                  <div class="footer__nav-item">
+                    <a class="footer__nav-lnk" href="javascript:">Каталог товаров</a>
+                  </div>
+                  <div class="footer__nav-item">
+                    <a class="footer__nav-lnk" href="javascript:">О нас</a>
+                  </div>
+                  <div class="footer__nav-item">
+                    <a class="footer__nav-lnk" href="javascript:">Акции и спецпредложения</a>
+                  </div>
+                  <div class="footer__nav-item">
+                    <a class="footer__nav-lnk" href="javascript:">Доставка и оплата</a>
+                  </div>
+                  <div class="footer__nav-item">
+                    <a class="footer__nav-lnk" href="javascript:">Полезные статьи</a>
+                  </div>
+                  <div class="footer__nav-item">
+                    <a class="footer__nav-lnk" href="javascript:">Отзывы клиентов</a>
+                  </div>
+                  <div class="footer__nav-item">
+                    <a class="footer__nav-lnk" href="javascript:">Наши контакты</a>
+                  </div>
+                </nav>
+              </div>
+              <div class="col-12 col-lg-6">
+                <form class="footer__search" action="">
+                  <input class="footer__search-field" type="search" placeholder="Поиск товаров по сайту" />
+                  <button class="footer__search-btn">
+                    <svg class="icon-svg-magnifying-glass footer__search-btn-icon" role="img">
+                      <use xlink:href="#icon-svg-magnifying-glass"></use>
+                    </svg>
+                  </button>
+                </form>
+                <div class="footer__tel">
+                  <a class="footer__tel-lnk" href="tel:+79251000399" title="Позвонить">+ 7 (925) 100-03-99</a>
+                  <div>Звонки принимаем круглосуточно!</div>
+                </div>
+                <div class="footer__opt">
+                  <a class="button" href="javascript:">Заказать обратный звонок</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__inn-bottom">
+          <div class="container-fluid text-center">
+            <p>© Кальянчик.ру, 2011-2014</p>
+          </div>
+        </div>
       </footer>
     </div>
     <!-- JS-->
-    <script src="static/js/main.js" async=""></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="static/js/main.min.js" async=""></script>
   </body>
 </html>
